@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMCC Founding Anniversary 2025 – Campus Event</title>
+<link rel="icon" href="logo.png">
+
+<style>
+  
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        background-color: #cce6ff; 
+        color: #222;
+    }
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+        background-color: #004b8d;
+        color: #fff;
+        text-align: center;
+        padding: 60px 20px;
+        background-image: url('images/banner.jpg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    header::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.4);
+    }
+    header h1, header p {
+        position: relative;
+        z-index: 1;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 3rem;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    header p {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* Navigation */
+    nav {
+        background-color: #99ccff;
+        padding: 12px 20px;
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #004b8d;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: #ffcc00;
+    }
+
+    /* Container */
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .main-section {
+        flex: 3 1 600px;
+    }
+
+    .sidebar {
+        flex: 1 1 250px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        height: fit-content;
+    }
+
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 25px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+
+    .code-block {
+        background-color: #222;
+        color: #e8e8e8;
+        padding: 12px;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-top: 10px;
+        font-family: monospace;
+    }
+
+    /* Buttons */
+    button.primary-btn {
+        background-color: #004b8d;
+        color: #fff;
+        border: none;
+        padding: 10px 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+    button.primary-btn:hover {
+        background-color: #0066cc;
+    }
+
+    .faq-question {
+        background-color: #f0f8ff;
+        padding: 10px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: bold;
+    }
+    .faq-answer {
+        display: none;
+        margin-top: 5px;
+        padding: 8px 12px;
+        background-color: #e6f2ff;
+        border-left: 4px solid #004b8d;
+        border-radius: 4px;
+        font-weight: normal;
+    }
+
+    .hidden-message {
+        display: none;
+        margin-top: 10px;
+        font-weight: bold;
+        color: #006600;
+    }
+
+    footer {
+        margin-top: auto;
+        background-color: #004b8d;
+        color: #fff;
+        text-align: center;
+        font-size: 0.95rem;
+        padding: 18px 20px;
+    }
+
+    /* Iframe */
+    iframe {
+        border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+        nav a {
+            display: block;
+            margin: 8px 0;
+        }
+        .card {
+            font-size: 14px;
+        }
+    }
+</style>
+
+<script>
+    function toggleMessage() {
+        const msg = document.getElementById("info-message");
+        msg.style.display = msg.style.display === "block" ? "none" : "block";
+    }
+
+    function toggleFAQ(id) {
+        const answer = document.getElementById("faq-answer-" + id);
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+    }
+</script>
+</head>
+<body>
+<div class="wrapper">
+
+<header>
+    <header style="background-image: url('images/banner.jpg');"></header>
+    <h1>SMCC Founding Anniversary 2025</h1>
+    <p>Celebrating Excellence & Tradition</p>
+</header>
+
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#promo">Promo Video</a>
+    <a href="#calendar">Calendar</a>
+    <a href="#tech">Tech Demo</a>
+    <a href="#faq">FAQ</a>
+</nav>
+
+<div class="container">
+
+    <section class="main-section">
+
+        <div class="card-container">
+
+            <!-- Overview -->
+            <article id="overview" class="card">
+                <h2>Overview of the Celebration</h2>
+                <p>SMCC Founding Anniversary 2025 showcases a week-long celebration filled with exciting events, activities, and student competitions.</p>
+                <button class="primary-btn" onclick="toggleMessage()">Toggle Event Info</button>
+                <p id="info-message" class="hidden-message">
+                    Welcome! Check out the schedule, gallery, and registration links below! 🎓🎉
+                </p>
+            </article>
+
+            <!-- Promo Video -->
+            <article id="promo" class="card">
+                <h2>Event Promo Video</h2>
+                <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+                    <iframe width="500" height="500" 
+                        src="https://www.youtube.com/embed/l7A-_efcMFs?si=1ZbPyMk6nWi6yLvf" 
+                        title="Promo Video" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </article>
+
+            <!-- Calendar -->
+            <article id="calendar" class="card">
+                <h2>Calendar of Activities</h2>
+                <p>Check out the week-long schedule of events for SMCC Founding Anniversary 2025:</p>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVek_G5DFs8pgHofvpTob9FCE8A9Dzy2Bdg&s" 
+                    alt="SMCC Calendar of Activities" style="max-width:100%; border-radius:10%; border:3px solid #004b8d;">
+                <p>Highlights include sports events, student competitions, and special ceremonies. Make sure to join your favorite events!</p>
+            </article>
+
+            <!-- Tech Demo -->
+            <article id="tech" class="card">
+                <h2>Tech Demo</h2>
+                <p>Command to open registration form in VS Code:</p>
+                <div class="code-block">
+<pre><code>function registerEvent() {
+    console.log("Register for SMCC Founding Anniversary 2025");
+}</code></pre>
+                </div>
+                <p>Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the command palette.</p>
+                <p>Sample output using <samp>:</samp> <samp>Registration successful!</samp></p>
+            </article>
+
+            <!-- FAQ -->
+            <article id="faq" class="card">
+                <h2>Frequently Asked Questions (FAQ)</h2>
+
+                <div class="faq-question" onclick="toggleFAQ(1)">Q1: How can I register? <span>▶</span></div>
+                <div class="faq-answer" id="faq-answer-1">Visit the registration link or fill out the form at the event desk.</div>
+
+                <div class="faq-question" onclick="toggleFAQ(2)">Q2: Where is the main celebration? <span>▶</span></div>
+                <div class="faq-answer" id="faq-answer-2">At SMCC main hall, Brgy. 4, Nasipit, Agusan del Norte.</div>
+
+                <div class="faq-question" onclick="toggleFAQ(3)">Q3: Is there a dress code? <span>▶</span></div>
+                <div class="faq-answer" id="faq-answer-3">Casual attire unless specified in the schedule.</div>
+            </article>
+
+            <!-- URL Example -->
+            <article class="card">
+                <h2>Registration URL Example</h2>
+                <p>URL-encoded registration link (where %20 = space):</p>
+                <div class="code-block">
+                    <code>https://myschool.edu/events/register?event=IT%20Week%202025&section=A</code>
+                </div>
+            </article>
+
+            <!-- HTML vs XHTML -->
+            <article class="card">
+                <h2>HTML vs XHTML Example</h2>
+                <p>HTML style:</p>
+                <code>&lt;br&gt;</code>
+                <p>XHTML style:</p>
+                <code>&lt;br /&gt;</code>
+                <p>In XHTML, tags must be properly closed and attributes must be quoted.</p>
+            </article>
+
+        </div>
+    </section>
+
+
+    <aside class="sidebar">
+        <h3>Quick Info 📌</h3>
+        <address>
+            Tel: +63 085 343-3251 / +63 085 283-3113<br>
+            Fax: +63 085 808-0892<br>
+            Brgy. 4, Nasipit, Agusan del Norte, Philippines<br>
+
+            <a href="https://www.smccnasipit.edu.ph" target="_blank">www.smccnasipit.edu.ph</a>
+        </address>
+        <p>Don't miss any event updates! ★ ✓</p>
+    </aside>
+
+</div>
+
+<footer>
+    SMCC Founding Anniversary 2025 &middot; ★ &copy; 2025
+</footer>
+
+</div>
+</body>
+</html>
